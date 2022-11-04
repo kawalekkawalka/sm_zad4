@@ -94,7 +94,6 @@ public class TaskListFragment extends Fragment {
 
         recyclerView = view.findViewById(R.id.task_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        updateView();
 
         return view;
     }
