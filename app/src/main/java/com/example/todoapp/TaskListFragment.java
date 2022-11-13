@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -24,6 +26,8 @@ public class TaskListFragment extends Fragment {
         private TextView nameTextView;
         private TextView dateTextView;
         private Task task;
+        private ImageView iconImageView;
+        private CheckBox checkBox;
 
         public TaskHolder(LayoutInflater inflater, ViewGroup parent){
             super(inflater.inflate(R.layout.list_item_task, parent, false));
@@ -31,12 +35,22 @@ public class TaskListFragment extends Fragment {
             
             nameTextView = itemView.findViewById(R.id.task_item_name);
             dateTextView = itemView.findViewById(R.id.task_item_date);
+            iconImageView = itemView.findViewById(R.id.icon_image_view);
+            checkBox = itemView.findViewById(R.id.checkbox_list);
+
         }
         
         public void bind(Task task){
             this.task = task;
             nameTextView.setText(task.getName());
             dateTextView.setText(task.getDate().toString());
+
+            if (task.getCategory().equals(Category.HOME)){
+                iconImageView.setImageResource(R.drawable.ic_house);
+            }
+            else {
+                iconImageView.setImageResource(R.drawable.ic_university);
+            }
         }
 
         @Override
@@ -45,6 +59,10 @@ public class TaskListFragment extends Fragment {
             intent.putExtra(KEY_EXTRA_TASK_ID, task.getId());
             startActivity(intent);
             
+        }
+
+        public CheckBox getCheckBox(){
+            return checkBox;
         }
     }
 
@@ -65,6 +83,10 @@ public class TaskListFragment extends Fragment {
         @Override
         public void onBindViewHolder(@NonNull TaskHolder holder, int position) {
             Task task = tasks.get(position);
+            CheckBox checkBox = holder.getCheckBox();
+            checkBox.setChecked(tasks.get(position).isDone());
+            checkBox.setOnCheckedChangeListener((buttonView, isChecked) ->
+                    tasks.get(holder.getBindingAdapterPosition()).setDone(isChecked));
             holder.bind(task);
         }
 
