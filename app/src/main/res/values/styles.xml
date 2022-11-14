@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextFieldStyle">
+        <item name="android:textColor">@color/colorPrimaryPurple</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:type">linear</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:minLines">1</item>
+    </style>
+</resources>

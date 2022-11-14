@@ -26,3 +26,9 @@ y
 Iapp/src/androidTest/java/com/example/todoapp/ExampleInstrumentedTest.java,5\7\57e8dab4591d8a05d72a7250d30d4fdb2c1cc834
 j
 :app/src/test/java/com/example/todoapp/ExampleUnitTest.java,b\a\bac20ec3a81ca3d6a4f0d756e87e55ee67b98ef6
+g
+7app/src/main/java/com/example/todoapp/MainActivity.java,7\4\74a7949decc42ab56367f2ea5bc60cc6cd8ef282
+q
+Aapp/src/main/java/com/example/todoapp/SingleFragmentActivity.java,e\8\e8a9291b3717a36a0728d81534d541945028bb7e
+c
+3app/src/main/java/com/example/todoapp/Category.java,9\1\91b47ec4c31cf86c8b5855ee90b8db13fdd9fbfa

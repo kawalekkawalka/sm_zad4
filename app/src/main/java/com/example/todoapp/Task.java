@@ -13,6 +13,7 @@ public class Task {
     public Task(){
         id = UUID.randomUUID();
         date = new Date();
+        category = Category.STUDIES;
     }
 
     public String getName() {
@@ -45,5 +46,9 @@ public class Task {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public void setDate(Date time) {
+        this.date = date;
     }
 }

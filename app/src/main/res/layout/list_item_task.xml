@@ -13,7 +13,7 @@
         />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
@@ -21,12 +21,16 @@
             android:id="@+id/task_item_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            style="@style/TextFieldStyle"
             />
 
         <TextView
             android:id="@+id/task_item_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="@style/TextFieldStyle"
             />
     </LinearLayout>
 
@@ -36,7 +40,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:srcCompat="@drawable/ic_house"
-        android:layout_gravity="right"/>
+        android:layout_gravity="right"
+        android:padding="@dimen/task_item_padding"/>
 
 
 

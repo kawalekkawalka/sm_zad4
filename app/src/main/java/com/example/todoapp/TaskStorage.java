@@ -41,4 +41,8 @@ public class TaskStorage {
         }
         return null;
     }
+
+    public void addTask(Task task){
+        tasks.add(task);
+    }
 }
